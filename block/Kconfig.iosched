@@ -120,8 +120,7 @@ choice
 		  used by default for all block devices.
 		  The BFQ I/O scheduler aims at distributing the bandwidth
 		  as desired, independently of the disk parameters and with
-		  any workload. It also tries to guarantee low latency to
-		  interactive and soft real-time applications.
+		  any workload. It also tries to guarantee low latency to		  interactive and soft real-time applications.
 
 	config DEFAULT_FIOPS
 		bool "FIOPS" if IOSCHED_FIOPS=y
