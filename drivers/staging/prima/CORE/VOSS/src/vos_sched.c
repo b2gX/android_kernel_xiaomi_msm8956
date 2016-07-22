@@ -2139,7 +2139,7 @@ bool vos_is_wd_thread(int threadId)
 
 void vos_dump_stack(uint8_t thread_id)
 {
-   switch (thread_id)
+   /*switch (thread_id)
    {
       case MC_Thread:
           wcnss_dump_stack(gpVosSchedContext->McThread);
@@ -2150,5 +2150,5 @@ void vos_dump_stack(uint8_t thread_id)
       default:
           VOS_TRACE(VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
                              "%s: Invalid thread invoked",__func__);
-   }
+   }*/
 }
