@@ -1,6 +1,5 @@
 /*
  * Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
- * Copyright (C) 2016 XiaoMi, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -293,8 +292,8 @@ static void wcd_clsh_set_hph_mode(struct snd_soc_codec *codec,
 		ipeak = DELTA_I_50MA;
 		break;
 	case CLS_H_HIFI:
-		val = 0x08;
-		gain = DAC_GAIN_M0P2DB;
+		val = 0x04;
+		gain = DAC_GAIN_M0P6DB;
 		ipeak = DELTA_I_50MA;
 		break;
 	case CLS_H_LP:
@@ -518,12 +517,12 @@ static void wcd_clsh_state_hph_lo(struct snd_soc_codec *codec,
 			}
 			if (req_state == WCD_CLSH_STATE_HPHL)
 				snd_soc_update_bits(codec,
-						WCD9XXX_A_CDC_RX1_RX_PATH_CFG0,
-						0x40, 0x40);
+					WCD9XXX_A_CDC_RX1_RX_PATH_CFG0,
+					0x40, 0x40);
 			if (req_state == WCD_CLSH_STATE_HPHR)
 				snd_soc_update_bits(codec,
-						WCD9XXX_A_CDC_RX2_RX_PATH_CFG0,
-						0x40, 0x40);
+					WCD9XXX_A_CDC_RX2_RX_PATH_CFG0,
+					0x40, 0x40);
 		}
 	} else {
 		if ((req_state == WCD_CLSH_STATE_HPHL) ||
